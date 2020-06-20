@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">記帳小幫手</string>
+    <string name="add">+</string>
+    <string name="account">帳戶</string>
+    <string name="analyze">圖表</string>
+    <string name="inorout">收支</string>
+    <string name="in">收入</string>
+    <string name="out">支出</string>
+    <string name="type">類別</string>
+    <string name="food">食物</string>
+    <string name="transport">交通</string>
+    <string name="fun">娛樂</string>
+    <string name="rent">房租</string>
+    <string name="salary">薪水</string>
+    <string name="bonus">紅利</string>
+    <string name="cost">金額</string>
+    <string name="memo">備註</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">確定</string>
+</resources>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".Activity_add">
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="48sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/out"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#6200EE"
+            android:gravity="center"
+            android:onClick="out"
+            android:text="@string/out"
+            android:textAlignment="center"
+            android:textColor="#E6E6E6"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/in"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#E6E6E6"
+            android:gravity="center"
+            android:onClick="in"
+            android:text="@string/in"
+            android:textAlignment="center"
+            android:textColor="#6200EE"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edit_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/cost"
+        android:inputType="number"
+        android:textAlignment="textEnd"
+        android:textSize="48sp" />
+
+    <EditText
+        android:id="@+id/edit_memo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/memo"
+        android:inputType="textPersonName"
+        android:textAlignment="textEnd"
+        android:textSize="48sp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:id="@+id/LV1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="lv1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/food"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/ic_food" />
+
+                <TextView
+                    android:id="@+id/text_food"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/food"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LV2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="lv2"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/transport"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/ic_bus" />
+
+                <TextView
+                    android:id="@+id/text_transport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/transport"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LV3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="lv3"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/fun"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/ic_tv" />
+
+                <TextView
+                    android:id="@+id/text_fun"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fun"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:id="@+id/LV4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="lv4"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/house"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/ic_house" />
+
+                <TextView
+                    android:id="@+id/text_house"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rent"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LV5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="lv5"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/salary"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/ic_salary" />
+
+                <TextView
+                    android:id="@+id/text_salary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/salary"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LV6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="lv6"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/bonus"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/ic_bonus" />
+
+                <TextView
+                    android:id="@+id/text_bonus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bonus"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/LH1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="cancel"
+            android:text="@string/cancel"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="confirm"
+            android:text="@string/confirm"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+</LinearLayout>
