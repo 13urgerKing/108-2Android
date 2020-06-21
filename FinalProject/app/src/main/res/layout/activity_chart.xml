@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity_chart">
+
+    <TextView
+        android:id="@+id/activityname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activityname"
+        android:textAlignment="center"
+        android:textSize="36sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/out"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#6200EE"
+            android:gravity="center"
+            android:onClick="out"
+            android:text="@string/out"
+            android:textAlignment="center"
+            android:textColor="#E6E6E6"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/in"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#E6E6E6"
+            android:gravity="center"
+            android:onClick="in"
+            android:text="@string/in"
+            android:textAlignment="center"
+            android:textColor="#6200EE"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </com.github.mikephil.charting.charts.PieChart>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="textStart"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/txtmoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:textSize="36sp" />
+    </LinearLayout>
+
+</LinearLayout>

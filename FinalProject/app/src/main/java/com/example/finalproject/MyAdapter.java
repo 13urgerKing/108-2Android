@@ -65,10 +65,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         holder.textd.setText(d.getDescription());
         holder.textn.setText(d.getMoney().toString());
         if(d.getModeIndex()==0){
-            holder.textn.setTextColor(Color.parseColor("#FF0000"));
+            holder.textn.setTextColor(Color.parseColor("#00FF00"));
         }
         else{
-            holder.textn.setTextColor(Color.parseColor("#00FF00"));
+            holder.textn.setTextColor(Color.parseColor("#FF0000"));
         }
     }
 

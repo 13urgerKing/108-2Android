@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recycler_view;
     private MyAdapter adapter;
     private CalendarView ca;
+    private Integer account=0;
     private String yyyy,mm,dd;
     private SimpleDateFormat sdf;
     private Vector v=new Vector();
@@ -112,6 +113,97 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent,ACTIVITY_ADD);
         overridePendingTransition(0, 0);
     }
+    public void ShowAccount(View view){
+        int monthcount=0;
+        for(int i=0;i<v.size();i++){
+            DATA d=(DATA)v.get(i);
+            if(d.getYear().equals(yyyy)&&d.getMonth().equals(mm)){
+                if(d.getModeIndex()==0){
+                    monthcount+=d.getMoney();
+                }
+                else{
+                    monthcount-=d.getMoney();
+                }
+            }
+        }
+        Intent intent=new Intent(this,Activity_acoount.class);
+        intent.putExtra("accountbalance",account);
+        intent.putExtra("monthcount",monthcount);
+        startActivity(intent);
+        overridePendingTransition(0, 0);
+    }
+    public void ShowChart(View view){
+        int ofood,ifood,otransport,itransport,ofun,ifun,orent,irent,osalary,isalary,obonus,ibonus;
+        ofood=ifood=otransport=itransport=ofun=ifun=orent=irent=osalary=isalary=obonus=ibonus=0;
+        for(int i=0;i<v.size();i++){
+            DATA d=(DATA)v.get(i);
+            if(d.getYear().equals(yyyy)&&d.getMonth().equals(mm)){
+                if(d.getTypeIndex()==0){
+                    if(d.getModeIndex()==0){
+                        ifood+=d.getMoney();
+                    }
+                    else{
+                        ofood+=d.getMoney();
+                    }
+                }
+                else if(d.getTypeIndex()==1){
+                    if(d.getModeIndex()==0){
+                        itransport+=d.getMoney();
+                    }
+                    else{
+                        otransport+=d.getMoney();
+                    }
+                }
+                else if(d.getTypeIndex()==2){
+                    if(d.getModeIndex()==0){
+                        ifun+=d.getMoney();
+                    }
+                    else{
+                        ofun+=d.getMoney();
+                    }
+                }
+                else if(d.getTypeIndex()==3){
+                    if(d.getModeIndex()==0){
+                        irent+=d.getMoney();
+                    }
+                    else{
+                        orent+=d.getMoney();
+                    }
+                }
+                else if(d.getTypeIndex()==4){
+                    if(d.getModeIndex()==0){
+                        isalary+=d.getMoney();
+                    }
+                    else{
+                        osalary+=d.getMoney();
+                    }
+                }
+                else if(d.getTypeIndex()==5){
+                    if(d.getModeIndex()==0){
+                        ibonus+=d.getMoney();
+                    }
+                    else{
+                        obonus+=d.getMoney();
+                    }
+                }
+            }
+        }
+        Intent intent=new Intent(this,Activity_chart.class);
+        intent.putExtra("ifood",ifood);
+        intent.putExtra("ofood",ofood);
+        intent.putExtra("itransport",itransport);
+        intent.putExtra("otransport",otransport);
+        intent.putExtra("ifun",ifun);
+        intent.putExtra("ofun",ofun);
+        intent.putExtra("irent",irent);
+        intent.putExtra("orent",orent);
+        intent.putExtra("isalary",isalary);
+        intent.putExtra("osalary",osalary);
+        intent.putExtra("ibonus",ibonus);
+        intent.putExtra("obonus",obonus);
+        startActivity(intent);
+        overridePendingTransition(0, 0);
+    }
     public void showdata(){
         Vector select=new Vector();
         for(int i=0;i<v.size();i++){
@@ -138,6 +230,13 @@ public class MainActivity extends AppCompatActivity {
                         ,data.getIntExtra("typeindex",0)
                         ,data.getStringExtra("type")));
                 showdata();
+                DATA d=(DATA)v.get(v.size()-1);
+                if(d.getModeIndex()==0){
+                    account+=d.getMoney();
+                }
+                else{
+                    account-=d.getMoney();
+                }
             }
         }
     }

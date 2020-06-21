@@ -17,4 +17,7 @@
     <string name="memo">備註</string>
     <string name="cancel">取消</string>
     <string name="confirm">確定</string>
+    <string name="accountlist">帳戶清單</string>
+    <string name="account1">帳戶1</string>
+    <string name="activityname">本月收支圓餅圖</string>
 </resources>

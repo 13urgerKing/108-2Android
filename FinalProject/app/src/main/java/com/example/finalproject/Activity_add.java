@@ -44,10 +44,6 @@ public class Activity_add extends AppCompatActivity {
         TextView textView=findViewById(R.id.text_date);
         textView.setText(yyyy+"/"+mm+"/"+dd);
     }
-    public void cancel(View view){
-        this.finish();
-        overridePendingTransition(0, 0);
-    }
     public void confirm(View view){
         if(edit_money.getText().toString().equals("")){
             Toast.makeText(this,"請輸入金額!!",Toast.LENGTH_SHORT).show();
