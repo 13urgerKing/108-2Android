@@ -35,7 +35,10 @@ public class MainActivity extends AppCompatActivity {
     public class DATA{
         private String y,m,d,mode,type,description;
         private Integer modeindex,typeindex,money;
-        public DATA(String year,String month,String day,Integer modeindex,String mode,Integer money,String description,Integer typeindex,String type){
+        public DATA(String year,String month,String day,
+                    Integer modeindex, String mode,
+                    Integer money,String description,
+                    Integer typeindex,String type){
             this.y=year;
             this.m=month;
             this.d=day;
